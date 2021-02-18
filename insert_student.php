@@ -1,6 +1,6 @@
 <?php
 // include database and object files
-include_once 'config/database.php';
+include_once 'config/connection.php';
 include_once 'objects/student.php';
   
 // get database connection
@@ -25,7 +25,7 @@ if($_POST){
   
     // set student property values
     $student->student_name = $_POST['student_name'];
-    $student->student_id = $_POST['student_id'];
+    $student->student_number = $_POST['student_number'];
     $student->student_age = $_POST['student_age'];
   
     // create the product
@@ -44,14 +44,14 @@ if($_POST){
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
   
     <table class='table table-hover table-responsive table-bordered'>
-	<tr>
-            <td>Student ID</td>
-            <td><input type='text' name='student_id' class='form-control' /></td>
-        </tr>
-  
         <tr>
             <td>Student Name</td>
             <td><input type='text' name='student_name' class='form-control' /></td>
+        </tr>
+
+        <tr>
+            <td>Student Number</td>
+            <td><input type='text' name='student_number' class='form-control' /></td>
         </tr>
   
         <tr>

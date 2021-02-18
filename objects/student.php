@@ -3,7 +3,7 @@ class Student{
   
     // database connection and table name
     private $conn;
-    private $table_name = "students";
+    private $table_name = "student";
   
     // object properties
     public $id;
